@@ -1,9 +1,11 @@
-<div>
-<b>Intentos restantes:</b> {{intentos-cont_intentos}}
-</div>
-<div>
- <span *ngFor="let card of cards; index as i">
-  <img src="{{card.visible ? card.url : images_inact}}" (click)="card_selected(i)">
- </span>
+<div class="container">
+ <div class="intentos">
+  <b>Intentos restantes:</b> {{intentos-cont_intentos}}
+ </div>
+ <div class="mesa-cartas">
+  <span *ngFor="let card of cards; index as i">
+   <img class="img-card" src="{{card.visible ? card.url : images_inact}}" (click)="card_selected(i)">
+  </span>
+ </div>
 </div>
 

@@ -67,7 +67,8 @@ export class CardsComponent implements OnInit {
    }
   }
   if(this.aciertos == this.count_aciertos){
-   console.log("Ganaste");
+   alert("Juego Terminado");
+   window.location.reload();
   }
   if(this.cont_intentos == this.intentos - 1){
    alert("Perdiste");

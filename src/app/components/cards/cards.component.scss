@@ -1,0 +1,40 @@
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+ font-family: 'Montserrat', sans-serif;
+}
+.container {
+ display: block;
+ position: relative;
+}
+.container::after {
+ content: "";
+ background: url(/assets/images/fondo.jpg);
+ bottom: 0;
+ left: 0;
+ opacity: 0.6;
+ position: absolute;
+ right: 0;
+ top: 0;
+ z-index: -1;   
+}
+.intentos{
+ font-size: 20px;
+ font-weight: 900;
+ padding: 10px;
+ text-align: center;
+ background-color: #fff;
+ width: 300px;
+ margin: 0 auto;
+}
+.mesa-cartas{
+ padding: 10px;
+}
+img.img-card:hover {
+ position: relative;
+ top: -7px;
+}
+img.img-card {
+ padding: 5px;
+}
