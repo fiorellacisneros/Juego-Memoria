@@ -18,7 +18,7 @@ export class CardsComponent implements OnInit {
  aciertos = 4;
  count_aciertos = 0;
 
- constructor() { }
+ constructor() {}
 
  ngOnInit() {
   let count_index = 0;
@@ -26,7 +26,7 @@ export class CardsComponent implements OnInit {
    if(count_index == this.aciertos){
     count_index = 0;
    }
-   let img = this.images(count_index);
+   let img = this.images[count_index];
    this.cards.push({
     id: img.id, 
     url: img.url, 
@@ -35,7 +35,6 @@ export class CardsComponent implements OnInit {
    });
    count_index++;
   }
-
  }
 
 }
