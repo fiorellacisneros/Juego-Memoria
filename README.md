@@ -3,7 +3,13 @@
 Este juego permite mezclar entretenimiento con desarrollo de la memoria, ya que nos impele a recordar lo más posible las posiciones de las cartas reveladas anteriormente para poder ganar.
 El reto fue proporcionado por Oeschle para evaluar mis habilidades como Front-End Developer.
 
-
+## Requisitos
+- [x] Mostrar 8 cartas sobre la mesa
+- [x] Las cartas siempre tienen pareja, ningun queda sola.
+- [x] Las cartas cargan aleatoriamente, tanto el tipo y número como el orden sobre la mesa
+- [x] Si encontramos un par, las cartas desaparecerán en su mismo sitio sin moverse las demás
+- [x] Solo son pares las cartas del mismo número y tipo/palo
+- [x] Si se encontraron todos los pares mostrar un mensaje de juego terminado.
 
 ## ¿Cómo jugar?
 
@@ -19,7 +25,6 @@ Pasos del juego:
 - El número de aciertos va incrementando cuando hacen match las imágenes.
 - El jugador tiene 12 intentos.
 - El juego termina cuando todas las cartas hacen pares o cuando el jugador se queda sin intentos.
-
 
 ## Implementación
 
