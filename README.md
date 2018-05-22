@@ -1,27 +1,34 @@
-# Ng5
+# Memory Game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+Este juego permite mezclar entretenimiento con desarrollo de la memoria, ya que nos impele a recordar lo más posible las posiciones de las cartas reveladas anteriormente para poder ganar.
+El reto fue proporcionado por Oeschle para evaluar mis habilidades como Front-End Developer.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## ¿Cómo jugar?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para poder accionar el juego, primero hay que desplegar el sistema:
+- Correr ng serve para iniciar el servidor.
+- En el explorador, colocar la dirección http://localhost:4200/.
+- La aplicación se recargará automáticamente si se cambia alguno de los archivos fuente.
 
-## Build
+Pasos del juego:
+- Hacer click en una carta para voltearla y descubrir su valor.
+- Se debe adivinar el par oculto de la carta previamente descubierta.
+- El número de aciertos va incrementando cuando hacen match las imágenes.
+- El jugador tiene 12 intentos.
+- El juego termina cuando todas las cartas hacen pares o cuando el jugador se queda sin intentos.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Implementación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para desarrollar este juego, se hizo uso de Angular CLI versión 6.0.3.
+Trabajado de manera local, se hicieron las pruebas de manera interna para verificar las funcionabilidades de la misma.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Puede jugar Memory Game dando click [aquí](https:---)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+---
+Memory Game, desarrollado por Fiorella Cisneros. Lima, 2018.
