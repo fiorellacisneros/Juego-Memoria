@@ -17,6 +17,8 @@ export class CardsComponent implements OnInit {
  last_select_id = null;
  aciertos = 4;
  count_aciertos = 0;
+ intentos = 10;
+ cont_intentos = 0;
 
  constructor() {}
 
@@ -36,5 +38,42 @@ export class CardsComponent implements OnInit {
    count_index++;
   }
  }
+ card_selected(idx){
+  if(!this.cards[idx].active){
+   return;
+  }
+  this.cards[idx].visible = true;
 
+  if(this.last_select_id == null){
+   this.last_select_id = idx;
+   this.cards[idx].visible = true;
+   this.cards[idx].active = false;
+  }else{
+   if(this.cards[this.last_select_id].id == this.cards[idx].id){ //aumentar aciertos si coinciden
+    this.count_aciertos++;
+    this.cards[idx].visible = true;
+    this.cards[idx].active = false;
+    this.last_select_id = null;
+   }else{ //no hacen match
+
+    let _this = this;
+    setTimeout(function(){
+     _this.cards[_this.last_select_id].visible = false; //ocultar 
+     _this.cards[_this.last_select_id].active = true; //activar
+     _this.cards[idx].visible = false;
+     _this.last_select_id = null;
+    },0.2*1000)
+
+   }
+  }
+  if(this.aciertos == this.count_aciertos){
+   console.log("Ganaste");
+  }
+  if(this.cont_intentos == this.intentos - 1){
+   alert("Perdiste");
+   window.location.reload();
+  }
+  this.cont_intentos++;
+  
+ }
 }

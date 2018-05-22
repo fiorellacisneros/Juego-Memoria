@@ -1,3 +1,9 @@
-<span *ngFor="let card of cards">
- <img src="{{card.url}}" ng-click="console.log(card.id)">
-</span>
+<div>
+<b>Intentos restantes:</b> {{intentos-cont_intentos}}
+</div>
+<div>
+ <span *ngFor="let card of cards; index as i">
+  <img src="{{card.visible ? card.url : images_inact}}" (click)="card_selected(i)">
+ </span>
+</div>
+
