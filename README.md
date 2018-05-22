@@ -17,7 +17,7 @@ Para poder accionar el juego, primero hay que desplegar el sistema:
 - Descargar este repositorio (mediante el botón **Clonar|Descargar**).
 - Correr **ng serve** en la consola para iniciar el servidor.
 - En el explorador, colocar la dirección **http://localhost:4200/**.
-- La aplicación de recargará automáticamente si se cambia alguno de los archivos fuente.
+- La aplicación se recargará automáticamente si se cambia alguno de los archivos fuente.
 
 Pasos del juego:
 - Hacer click en una carta para voltearla y descubrir su valor.
