@@ -17,7 +17,7 @@ export class CardsComponent implements OnInit {
  private last_select_id = null;
  private aciertos = 4;
  private count_aciertos = 0;
- public intentos = 15;
+ public intentos = 12;
  public cont_intentos = 0;
 
  constructor() {
