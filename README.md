@@ -8,9 +8,10 @@ El reto fue proporcionado por Oeschle para evaluar mis habilidades como Front-En
 ## ¿Cómo jugar?
 
 Para poder accionar el juego, primero hay que desplegar el sistema:
-- Correr ng serve para iniciar el servidor.
-- En el explorador, colocar la dirección http://localhost:4200/.
-- La aplicación se recargará automáticamente si se cambia alguno de los archivos fuente.
+- Descargar este repositorio (mediante el botón **Clonar|Descargar**).
+- Correr **ng serve** en la consola para iniciar el servidor.
+- En el explorador, colocar la dirección **http://localhost:4200/**.
+- La aplicación de recargará automáticamente si se cambia alguno de los archivos fuente.
 
 Pasos del juego:
 - Hacer click en una carta para voltearla y descubrir su valor.
@@ -26,8 +27,8 @@ Para desarrollar este juego, se hizo uso de Angular CLI versión 6.0.3.
 Trabajado de manera local, se hicieron las pruebas de manera interna para verificar las funcionabilidades de la misma.
 
 
-Puede jugar Memory Game dando click [aquí](https:---)
-
+Para hacerme llegar observaciones y alcances acerca de este desarrollo, por favor sírvanse escribir a mi correo personal: mfcisnerosr@gmail.com
+Siempre estoy en constante mejora, el feedback siempre es bien recibido.
 
 
 ---
