@@ -1,11 +1,42 @@
-<div class="container">
- <div class="intentos">
-  <b>Intentos restantes:</b> {{intentos-cont_intentos}}
- </div>
- <div class="mesa-cartas">
-  <span *ngFor="let card of cards; index as i">
-   <img class="img-card" src="{{card.visible ? card.url : images_inact}}" (click)="card_selected(i)">
-  </span>
- </div>
-</div>
+<section class="section__sticky">
+    <div class="section__sticky section__one">
+        <div class="page-padding">
+            <div class="container-large">
+                <div class="padding-large">
+                    <div class="">
+                        <h2>Juego de Memoria</h2>
+                    </div>
+                
+                    <div>
+                        <h4>Reglas del juego</h4>
+                        <ul>
+                            <li>Hacer click en una carta para voltearla y descubrir su valor.</li> 
+                            <li>Se debe adivinar el par oculto de la carta previamente descubierta.</li>
+                            <li>El número de aciertos va incrementando cuando hacen match las imágenes.</li>
+                            <li>El jugador tiene 12 intentos.</li>
+                            <li>El juego termina cuando todas las cartas hacen pares o cuando el jugador se queda sin intentos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="section__sticky section__two">
+        <div class="page-padding">
+            <div class="container-large">
+                <div class="padding-large">
+                    <div class="game__intentos">
+                        <b>{{(intentos-cont_intentos < intentos) ? "Intentos restantes:" : "Intentos:"}}</b> {{intentos-cont_intentos}} <br>
+                        <b>Aciertos :</b> {{count_aciertos}}
+                    </div>
+                    <div class="game__table">
+                        <span *ngFor="let card of cards; index as i">
+                            <img class="game__img--card" src="{{card.visible ? card.url : images_inact}}" (click)="cardSelected(i)">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

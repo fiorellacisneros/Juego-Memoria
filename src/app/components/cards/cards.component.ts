@@ -5,20 +5,22 @@ import {Component, OnInit} from '@angular/core';
  templateUrl: './cards.component.html',
  styleUrls: ['./cards.component.scss']
 })
+
 export class CardsComponent implements OnInit {
+
  private images = [
   {id: 1, url: "/assets/images/10.png"},
   {id: 2, url: "/assets/images/J.png"},
   {id: 3, url: "/assets/images/K.png"},
   {id: 4, url: "/assets/images/Q.png"}
  ];
- public images_inact = "/assets/images/poker.png";
- public cards = [];
- private last_select_id = null;
  private aciertos = 4;
- private count_aciertos = 0;
- public intentos = 12;
+ private last_select_id = null;
+ public cards = [];
  public cont_intentos = 0;
+ public count_aciertos = 0;
+ public images_inact = "/assets/images/poker.png";
+ public intentos = 12;
 
  constructor() {
  }
@@ -32,17 +34,17 @@ export class CardsComponent implements OnInit {
    let img = this.images[count_index];
    this.cards.push({
     id: img.id,
+    active: true, 
     url: img.url,
-    visible: false, //si la imagen se muestra
-    active: true //seleccionable
+    visible: false 
    });
    count_index++;
   }
-  this.RandomArray(this.cards);
+  this.randomCards(this.cards);
  }
 
 
- card_selected(idx) {
+ cardSelected(idx) {
   if (!this.cards[idx].active) {
    return;
   }
@@ -53,36 +55,43 @@ export class CardsComponent implements OnInit {
    this.cards[idx].visible = true;
    this.cards[idx].active = false;
   } else {
-   if (this.cards[this.last_select_id].id == this.cards[idx].id) { //aumentar aciertos si coinciden
+      this.logicGame(idx);
+  }
+  if (this.aciertos == this.count_aciertos) {
+   alert("Ganaste!!");
+   window.location.reload();
+  }
+  if (this.cont_intentos == this.intentos - 1) {
+   alert("Te quedaste sin intentos");
+   window.location.reload();
+  }
+ }
+
+ logicGame(idx){
+    if (this.cards[this.last_select_id].id == this.cards[idx].id) { //aumentar aciertos si coinciden
+        this.increasePoints(idx);
+    } else { //no hacen match
+        let _this = this;
+
+        setTimeout(function() {
+         _this.cards[_this.last_select_id].visible = false; //ocultar
+         _this.cards[_this.last_select_id].active = true; //activar
+         _this.cards[idx].visible = false;
+         _this.last_select_id = null;
+        }, 0.2 * 1000)
+        this.cont_intentos++;
+    }
+ }
+
+ increasePoints(idx){
     this.count_aciertos++;
     this.cards[idx].visible = true;
     this.cards[idx].active = false;
     this.last_select_id = null;
-   } else { //no hacen match
-
-    let _this = this;
-    setTimeout(function () {
-     _this.cards[_this.last_select_id].visible = false; //ocultar
-     _this.cards[_this.last_select_id].active = true; //activar
-     _this.cards[idx].visible = false;
-     _this.last_select_id = null;
-    }, 0.2 * 1000)
-
-   }
-  }
-  if (this.aciertos == this.count_aciertos) {
-   alert("Juego Terminado");
-   window.location.reload();
-  }
-  if (this.cont_intentos == this.intentos - 1) {
-   alert("Perdiste");
-   window.location.reload();
-  }
-  this.cont_intentos++;
-
+    this.cont_intentos++;
  }
 
- RandomArray(array) {
+ randomCards(array) {
   let currentIndex = array.length, temporaryValue, randomIndex;
 
   while (0 !== currentIndex) {
