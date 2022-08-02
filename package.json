@@ -20,8 +20,11 @@
     "@angular/platform-browser": "^7.2.16",
     "@angular/platform-browser-dynamic": "^7.2.16",
     "@angular/router": "^7.2.16",
+    "@lottiefiles/lottie-player": "^1.5.7",
     "bootstrap": "^4.6.2",
     "core-js": "^2.5.4",
+    "lottie-web": "^5.9.6",
+    "ngx-lottie": "^8.2.0",
     "node-sass": "^7.0.1",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"

@@ -1,0 +1,23 @@
+<div class="card__container">
+  <div class="">
+      <h2>Juego de Memoria</h2>
+  </div>
+
+  <div>
+      <h4>Reglas del juego</h4>
+      <ul>
+          <li>Hacer click en una carta para voltearla y descubrir su valor.</li> 
+          <li>Se debe adivinar el par oculto de la carta previamente descubierta.</li>
+          <li>El número de aciertos va incrementando cuando hacen match las imágenes.</li>
+          <li>El jugador tiene 12 intentos.</li>
+          <li>El juego termina cuando todas las cartas hacen pares o cuando el jugador se queda sin intentos.</li>
+      </ul>
+  </div>
+    <ng-lottie
+    [options]="opts$ | async"
+    width="200"
+    height="200"
+    (complete)="repeat()"></ng-lottie>
+  <div>
+  </div>
+</div>
